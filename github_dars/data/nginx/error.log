@@ -1,0 +1,1058 @@
+2023/02/11 16:13:43 [error] 23#23: *225 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot use yii\widgets\DetailView as DetailView because the name is already in use in /app/views/book/view.php on line 5" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/view?id=1 HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/index"
+2023/02/12 06:14:27 [error] 27#27: *20 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb3600
+2023/02/12 06:14:27 [error] 27#27: *20 FastCGI sent in stderr: "6db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_COOKIE' => 'adminer_permanent=; PHPSESSID=jgatrtl1hnoaohli7clhn4geah; _csrf=9bd95f22c2a7851329b308594ac360b6984cce71af285a573470b8996935bfeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229ClBD_pEprCec_ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_REFERER' => 'http://localhost/kungfu/game',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.3',
+    'REMOTE_PORT' => '52084',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/kungfu/game?search=jacke+queen+king+dolly',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'search=jacke+queen+king+dolly',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676182467.817469,
+    'REQUEST_TIME' => 1676182467,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/game?search=jacke+queen+king+dolly HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/kungfu/game"
+2023/02/12 06:34:29 [error] 28#28: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/game?search=jacke+queen+king+dolly HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/kungfu/game"
+2023/02/12 06:34:29 [error] 28#28: *22 FastCGI sent in stderr: "{main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_COOKIE' => 'adminer_permanent=; PHPSESSID=jgatrtl1hnoaohli7clhn4geah; _csrf=9bd95f22c2a7851329b308594ac360b6984cce71af285a573470b8996935bfeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229ClBD_pEprCec_ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_REFERER' => 'http://localhost/kungfu/game',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.te
+2023/02/12 06:56:12 [error] 21#21: *34 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb3600
+2023/02/12 09:26:56 [error] 23#23: *205 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot use app\models\BookSearch as BookSearch because the name is already in use in /app/controllers/KungfuController.php on line 11" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/info HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 09:27:28 [error] 23#23: *205 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot use app\models\BookSearch as BookSearch because the name is already in use in /app/controllers/KungfuController.php on line 11" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/info HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 09:44:29 [error] 23#23: *236 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/info HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 09:44:29 [error] 23#23: *236 FastCGI sent in stderr: "php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETCH_SITE' => 'cross-site',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_COOKIE' => 'adminer_permanent=; PHPSESSID=jgatrtl1hnoaohli7clhn4geah; _csrf=9bd95f22c2a7851329b308594ac360b6984cce71af285a573470b8996935bfeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229ClBD_pEprCec_ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.3',
+    'REMOTE_PORT' => '39524',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/kungfu/info',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676195069.8
+2023/02/12 09:45:45 [error] 24#24: *244 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /kungfu/info HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 09:45:45 [error] 24#24: *244 FastCGI sent in stderr: "php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETCH_SITE' => 'cross-site',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_COOKIE' => 'adminer_permanent=; PHPSESSID=jgatrtl1hnoaohli7clhn4geah; _csrf=9bd95f22c2a7851329b308594ac360b6984cce71af285a573470b8996935bfeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229ClBD_pEprCec_ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.3',
+    'REMOTE_PORT' => '39912',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/kungfu/info',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676195145.0
+2023/02/12 09:45:56 [error] 24#24: *244 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360
+2023/02/12 13:04:12 [error] 22#22: *65 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot redeclare app\controllers\BookController::actionBook() in /app/controllers/BookController.php on line 153" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/search HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/"
+2023/02/12 13:11:25 [error] 22#22: *70 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /app/views/book/author_view.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/author?search=Jacke HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/12 13:12:24 [error] 22#22: *72 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /app/views/book/author_view.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/author?search=Jacke HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/12 13:18:37 [error] 22#22: *77 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /app/views/book/author_view.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/author?search=Jacke HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/author?search=Jopa"
+2023/02/12 14:13:03 [error] 24#24: *107 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\web\BadRequestHttpException: Missing required parameters: id in /app/vendor/yiisoft/yii2/web/Controller.php:202
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\web\Controller->bindActionParams()
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#2 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#3 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#4 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#5 /app/web/index.php(12): yii\base\Application->run()
+#6 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+2023/02/12 14:13:03 [error] 24#24: *107 FastCGI sent in stderr: "pplication/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '32922',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/view',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211183.160692,
+    'REQUEST_TIME' => 1676211183,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/view HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:13:19 [error] 24#24: *107 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\web\BadRequestHttpException: Missing required parameters: id in /app/vendor/yiisoft/yii2/web/Controller.php:202
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\web\Controller->bindActionParams()
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#2 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#3 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#4 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#5 /app/web/index.php(12): yii\base\Application->run()
+#6 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+2023/02/12 14:13:19 [error] 24#24: *107 FastCGI sent in stderr: "ion/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '32922',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/view',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211199.468616,
+    'REQUEST_TIME' => 1676211199,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/view HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:13:54 [error] 24#24: *107 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 14:13:54 [error] 24#24: *107 FastCGI sent in stderr: "YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '32922',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211234.211376,
+    'REQUEST_TIME' => 1676211234,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:14:11 [error] 24#24: *107 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 14:14:11 [error] 24#24: *107 FastCGI sent in stderr: "TTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '32922',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211251.136723,
+    'REQUEST_TIME' => 1676211251,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:15:06 [error] 24#24: *107 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 14:15:06 [error] 24#24: *107 FastCGI sent in stderr: "YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '32922',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211306.242702,
+    'REQUEST_TIME' => 1676211306,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:26:08 [error] 24#24: *141 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 14:26:08 [error] 24#24: *141 FastCGI sent in stderr: "YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '48400',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211968.911799,
+    'REQUEST_TIME' => 1676211968,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 14:26:27 [error] 24#24: *141 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 14:26:27 [error] 24#24: *141 FastCGI sent in stderr: "TTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '48400',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676211987.686982,
+    'REQUEST_TIME' => 1676211987,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2023/02/12 15:04:32 [error] 24#24: *153 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 15:04:32 [error] 24#24: *153 FastCGI sent in stderr: "ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_REFERER' => 'http://localhost/book/entry',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '45156',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676214272.373369,
+    'REQUEST_TIME' => 1676214272,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/entry"
+2023/02/12 15:05:33 [error] 24#24: *153 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 15:05:33 [error] 24#24: *153 FastCGI sent in stderr: "ojeG8W3YntmWwuU_tR%22%3B%7D',
+    'HTTP_REFERER' => 'http://localhost/book/create',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '45156',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676214333.308045,
+    'REQUEST_TIME' => 1676214333,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/create"
+2023/02/12 15:08:10 [error] 24#24: *166 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction()
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#2 [internal function]: yii\base\ErrorHandler->handleException()
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: book/index in /app/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /app/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /app/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+ 
+2023/02/12 15:08:10 [error] 24#24: *166 FastCGI sent in stderr: "HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_REFERER' => 'http://localhost/book/create',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '50650',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/book/index',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676214490.953834,
+    'REQUEST_TIME' => 1676214490,
+]" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/index HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost", referrer: "http://localhost/book/create"
+2023/02/13 10:07:09 [error] 20#20: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another er" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost"
+2023/02/13 10:07:09 [error] 20#20: *1 FastCGI sent in stderr: "ror:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETC
+2023/02/13 10:12:59 [error] 21#21: *4 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'bd15f89fdd6b',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'HOME' => '/var/www',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_VERSION' => '8.1.0',
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz',
+    'PATH' => '/usr/local/sbin:/usr/local/bi" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost"
+2023/02/13 10:12:59 [error] 21#21: *4 FastCGI sent in stderr: "n:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PWD' => '/app',
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+    'USER' => 'www-data',
+    'HTTP_SEC_FETCH_SITE' => 'cross-site',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => 'mysite.test',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.6',
+    'REMOTE_PORT' => '58392',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.23.3',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/lesson/go',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1676283179.35623,
+    'REQUEST_TIME' => 1676283179,
+]PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea0d2b58924.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost"
+2023/02/13 10:16:21 [error] 22#22: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea0df5b6ee0.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost"
+2023/02/13 10:16:27 [error] 22#22: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea0dfbbc34b.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost"
+2023/02/13 10:22:19 [error] 25#25: *17 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea0f5bb2c55.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /lesson/go?page=1 HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/lesson/go?page=5"
+2023/02/13 10:33:18 [error] 20#20: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea11eedbb16.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/book?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:33:36 [error] 20#20: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea1200af473.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/book?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:33:46 [error] 20#20: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea120aee32f.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/book?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:34:09 [error] 20#20: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea1221df257.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/book?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:34:58 [error] 20#20: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea1252ce83e.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/search HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/"
+2023/02/13 10:40:58 [error] 20#20: *44 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea13ba89114.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/genre?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:50:47 [error] 20#20: *53 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea160725f99.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/genre?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:56:41 [error] 20#20: *55 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea1769ceb87.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/genre?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 10:56:42 [error] 20#20: *55 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/app/runtime/debug/63ea176acfdd6.data): Failed to open stream: Permission denied in /app/vendor/yiisoft/yii2-debug/src/LogTarget.php on line 73" while reading upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/genre?search= HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search"
+2023/02/13 11:22:15 [error] 21#21: *96 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /app/views/book/author_view.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: mysite.test, request: "GET /book/author?search=Elza HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "localhost", referrer: "http://localhost/book/search?page=1"
